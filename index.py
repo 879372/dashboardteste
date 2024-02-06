@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-
+from flask import Flask
 # import from folders/theme changer
 from app import *
 from dash_bootstrap_templates import ThemeSwitchAIO
@@ -530,4 +530,4 @@ def controller(n_intervals, play, stop, rangeslider, controller):
 
 # Run server
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run(host='0.0.0.0')
